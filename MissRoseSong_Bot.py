@@ -116,7 +116,24 @@ def song(client, message):
         query += ' ' + str(i)
     print(query)
     m = message.reply('🔎 Searching the song...')
-    ydl_opts = {"format": "bestvideo[height<=480]+bestaudio/best[height<=480]"}
+    ydl_opts = {
+    'format': 'bestvideo[height<=480]+bestaudio/best[height<=480]',
+    'videoformat' : "mp4",
+    'outtmpl': '%(title)s.%(ext)s',
+    'writethumbnail': True,
+    'writesubtitles': True,
+    'writeautomaticsub': True,
+    'subtitleslangs': 'en',
+    'postprocessors': [{
+        'key': 'FFmpegExtractAudio',    #what to use for video format converting?
+        'preferredcodec': 'mp3',        #what to use for video format converting?
+        'preferredquality': '192',      #what to use for video format converting?
+    }],
+    'logger': MyLogger(),
+    'progress_hooks': [my_hook],
+}
+with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+    ydl.download([video_url])
     try:
         results = []
         count = 0
