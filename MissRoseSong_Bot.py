@@ -50,18 +50,7 @@ def song(client, message):
         query += ' ' + str(i)
     print(query)
     m = message.reply('🔎 Searching the song...')
-    ydl_opts = {"
-        "format": "best",
-        "addmetadata": True,
-        "key": "FFmpegMetadata",
-        "prefer_ffmpeg": True,
-        "geo_bypass": True,
-        "nocheckcertificate": True,
-        "postprocessors": [{"key": "FFmpegVideoConvertor", "preferedformat": "mp4"}],
-        "outtmpl": "%(id)s.mp4",
-        "logtostderr": False,
-        "quiet": True,
-    }
+    ydl_opts = {"format": "bestvideo[ext=mp4]"}
     try:
         results = []
         count = 0
