@@ -116,7 +116,7 @@ def song(client, message):
         query += ' ' + str(i)
     print(query)
     m = message.reply('🔎 Searching the song...')
-    ydl_opts = {"format": "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best"}
+    ydl_opts = {"format": "bestvideo[height<=480]+bestaudio/best[height<=480]"}
     try:
         results = []
         count = 0
