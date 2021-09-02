@@ -116,7 +116,7 @@ def song(client, message):
         query += ' ' + str(i)
     print(query)
     m = message.reply('🔎 Searching the song...')
-    ydl_opts = {"format": "bestaudio[ext=m4a]"}
+    ydl_opts = {"format": "bestaudio", "writethumbnail": True,"addmetadata": True,"geo-bypass": True,"nocheckcertificate": True,"outtmpl": "%(id)s.mp3"}
     try:
         results = []
         count = 0
