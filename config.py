@@ -1,5 +1,5 @@
 class Config:
-    BOT_TOKEN = "1955303395:AAGu7yn4oPlBqaF6Fv79sYmDLjmaa5ST0fk" 
-    API_ID =  4038923
-    API_HASH = "2835eefd1bc28eb0b64646038be2a471"
+    BOT_TOKEN = "1973010285:AAHRSMgq8GRPtzh6p0-PBbowjMeWBqbMYic" 
+    API_ID =  7133701
+    API_HASH = "9413ba3f6821fcf44e09aa349aeb33b0"
     
