@@ -29,15 +29,15 @@ def time_to_seconds(time):
 ## Commands --------------------------------
 @bot.on_message(filters.command(['start']))
 def start(client, message):
-    darkprince = f'👋 Hello @{message.from_user.username}\n\n [🤚](https://telegra.ph//file/cc470adfbb306ce83ca6f.jpg)\n I\'m DMG-X Song Bot, I can upload songs. Devolope By Pahan Harsh & ARCH. Type /song song name:'
+    darkprince = f'👋 Hello @{message.from_user.username}\n\n [🤚](https://telegra.ph//file/2e1b8f656de433e39e73b.jpg)\n I\'m SL Music Zone Song Bot, I can upload songs. Develop By Pahan Harsh & ARCH. Type /song song name:'
     message.reply_text(
         text=darkprince, 
         quote=False,
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('GROUP', url='https://t.me/Dark_music_Gangex_2021'),
-                    InlineKeyboardButton('CHANNEL', url='https://t.me/Darkmusicgangx')
+                    InlineKeyboardButton('SLMUSICZONE', url='https://t.me/SLMUSICZONE1'),
+                    InlineKeyboardButton('DMG-X', url='https://t.me/Darkmusicgangx')
                 ]
             ]
         )
@@ -93,7 +93,7 @@ def song(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎧 **Title**: [{title[:35]}]({link})\n⏳ **Duration**: `{duration}`\n👁‍🗨 **Views**: `{views}`\n\n**@Darkmusicgangx**'
+        rep = f'🎧 **Title**: [{title[:35]}]({link})\n⏳ **Duration**: `{duration}`\n👁‍🗨 **Views**: `{views}`\n\n**@SLMUSICZONE1**'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
@@ -163,7 +163,7 @@ def song(client, message):
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
-        rep = f'🎧 **Title**: [{title[:35]}]({link})\n⏳ **Duration**: `{duration}`\n👁‍🗨 **Views**: `{views}`\n\n**@Darkmusicgangx**'
+        rep = f'🎧 **Title**: [{title[:35]}]({link})\n⏳ **Duration**: `{duration}`\n👁‍🗨 **Views**: `{views}`\n\n**@SLMUSICZONE1**'
         secmul, dur, dur_arr = 1, 0, duration.split(':')
         for i in range(len(dur_arr)-1, -1, -1):
             dur += (int(dur_arr[i]) * secmul)
