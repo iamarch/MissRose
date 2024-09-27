@@ -15,7 +15,8 @@ bot = Client(
     'missqueen',
     bot_token = Config.BOT_TOKEN,
     api_id = Config.API_ID,
-    api_hash = Config.API_HASH
+    api_hash = Config.API_HASH,
+    DURATION_LIMIT  = Config.Dure_Limit
 )
 
 ## Extra Fns -------------------------------
